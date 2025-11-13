@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summer Collection</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- ======== NAVIGATION BAR START ========= -->
+    <nav class="navbar">
+      <a href="../../Index.html" style="text-decoration: none;"> <div class="logo" >Madam Boutique</div></a>
+
+
+    <!-- Hamburger icon for mobile -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- Navigation links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../../Index.html">Home</a></li>
+      <li><a href="../../Index.html">Collections</a></li>
+      <li><a href="../../Index.html">Brands</a></li>
+      <li><a href="../../Index.html">Gallery</a></li>
+      <li><a href="../../Index.html">Designers</a></li>
+      <li><a href="../../about.html">About</a></li>
+      <li><a href="../../login/login.html"><button class="login-btn">Login</button></a></li>
+    </ul>
+  </nav>
+
+
+    <!-- ======== SECTION START ========= -->
+  <section class="collection-section">
+    <h1>Saya Suits</h1>
+    <p>Saya blends traditional artistry with modern designs, offering premium fabrics and versatile collections that celebrate the spirit of the modern Pakistani woman.</p>
+    
+    
+    <div class="cards-container">
+      <!-- 9 Product Cards -->
+      <div class="card">
+        <img src="saya1.jpg" alt="Product 1">
+        <h3>Pearl Veil</h3>
+        <p>Soft cotton shirt for everyday comfort.</p>
+        <p>Price: 1500</p>
+        <button class="buy-btn" data-name="Pearl Veil" data-price="1500" data-img="saya1.jpg">Buy Now</button>
+      </div>
+
+      <div class="card">
+        <img src="saya2.jpg" alt="Product 2">
+        <h3>Opal Serenity</h3>
+        <p>Light and comfy shorts for beach fun.</p>
+        <p>Price: 1200</p>
+        <button class="buy-btn" data-name="Opal Serenity" data-price="1200" data-img="saya2.jpg">Buy Now</button>
+      </div>
+
+      <div class="card">
+        <img src="saya3.jpg" alt="Product 3">
+        <h3>Dusky Petals</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 2100</p>
+        <button class="buy-btn" data-name="Dusky Petals" data-price="2100" data-img="saya3.jpg">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="saya4.jpg" alt="Product 3">
+        <h3>Mauve Mirage</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 2200</p>
+        <button class="buy-btn" data-name="Mauve Mirage" data-price="2200" data-img="saya4.jpg">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="saya5.jpg" alt="Product 3">
+        <h3>Blush Horizon</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 2800</p>
+        <button class="buy-btn" data-name="Blush Horizon" data-price="2800" data-img="saya5.jpg">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="saya6.jpg" alt="Product 3">
+        <h3>Velvet Dew</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 6700</p>
+        <button class="buy-btn" data-name="Velvet Dew" data-price="6700" data-img="saya6.jpg">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="saya7.jpg" alt="Product 3">
+        <h3>Amber Gleaml</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 2300</p>
+        <button class="buy-btn" data-name="Amber Gleam" data-price="2300" data-img="saya7.jpg">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="saya8.jpg" alt="Product 3">
+        <h3>Noor Elan</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 5600</p>
+        <button class="buy-btn" data-name="Noor Elan" data-price="5600" data-img="saya8.jpg">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="saya9.jfif" alt="Product 3">
+        <h3>Sandal Whisper</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 3400</p>
+        <button class="buy-btn" data-name="Sandal Whisper" data-price="3400" data-img="saya9.jfif">Buy Now</button>
+      </div>
+
+      <!-- Add more dummy cards similarly (total 9) -->
+    </div>
+  </section>
+
+  <!-- Popup Section -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span id="closePopup">&times;</span>
+      <img id="popupImg" src="" alt="Product">
+      <h3 id="popupName"></h3>
+      <p>Price: Rs <span id="popupPrice">0</span></p>
+      <div class="quantity-control">
+        <button id="decreaseQty">-</button>
+        <span id="quantity">1</span>
+        <button id="increaseQty">+</button>
+      </div>
+      <p>Total: Rs <span id="totalPrice">0</span></p>
+      <button id="purchaseBtn">Purchase</button>
+    </div>
+  </div>
+
+  <!-- Purchase Notification -->
+  <div id="orderMessage" class="order-message">Your order has been placed!</div>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Branding Column -->
+      <div class="footer-column">
+        <h2 class="footer-logo">Madam’s Boutique</h2>
+        <p class="footer-tagline">Elegance in Every Thread</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../../Index.html">Home</a></li>
+          <li><a href="../../Index.html">Collections</a></li>
+          <li><a href="../../Index.html">Brands</a></li>
+          <li><a href="../../Index.html">Gallery</a></li>
+          <li><a href="../../Index.html">Designers</a></li>
+          <li><a href="../../about.html">About</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Support -->
+      
+
+      <!-- Contact Information -->
+      <div class="footer-column">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+        <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+        <p><i class="fas fa-envelope"></i> support@madamsboutique.com</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Madam’s Boutique. All Rights Reserved. | Designed by Muhib Ahmad</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

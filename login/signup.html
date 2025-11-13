@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Madam Boutique</title>
+  <link rel="stylesheet" href="signup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="signup-container">
+    <div class="form-box">
+      <h2>Create Account</h2>
+
+      <form action="#">
+        <div class="input-group">
+          <input type="text" placeholder="Full Name" required>
+        </div>
+        <div class="input-group">
+          <input type="email" placeholder="Email Address" required>
+        </div>
+        <div class="input-group">
+          <input type="password" placeholder="Password" required>
+        </div>
+        <div class="input-group">
+          <input type="password" placeholder="Confirm Password" required>
+        </div>
+
+        <button type="submit" class="signup-btn">Sign Up</button>
+
+        <p class="or-text">or</p>
+
+        <div class="social-login">
+          <a href="https://www.google.com"><button class="google-btn"><i class="fa-brands fa-google"></i> Continue with Google</button></a>
+          <a href="https://www.apple.com"><button class="apple-btn"><i class="fa-brands fa-apple"></i> Continue with Apple</button></a>
+          <a href="https://www.facebook.com"><button class="facebook-btn"><i class="fa-brands fa-facebook"></i> Continue with Facebook</button></a>
+        </div>
+
+        <p class="login-link">
+          Already have an account? <a href="login.html">Login</a>
+        </p>
+      </form>
+    </div>
+  </div>
+  <script>
+    function validateSignup() {
+      // get values
+      let name = document.querySelector('input[placeholder="Full Name"]').value.trim();
+      let email = document.querySelector('input[placeholder="Email Address"]').value.trim();
+      let password = document.querySelector('input[placeholder="Password"]').value;
+      let confirmPassword = document.querySelector('input[placeholder="Confirm Password"]').value;
+  
+      // regex patterns (same as your original code)
+      let namrule = /^[A-Za-z]{3,}$/; 
+      let emailrule = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3}$/;
+      let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  
+      // empty check
+      if (name === "" || email === "" || password === "" || confirmPassword === "") {
+        alert("Submit all your data.");
+        return false;
+      }
+  
+      // name validation
+      if (!namrule.test(name)) {
+        alert("Error: Name sirf alphabets ho aur kam se kam 3 letters ka ho.");
+        return false;
+      }
+  
+      // email validation
+      if (!emailrule.test(email)) {
+        alert("Error: Email ka format sahi nahi hai. (e.g. example@xyz.com)");
+        return false;
+      }
+  
+      // password validation
+      if (!passwordPattern.test(password)) {
+        alert("Error: Password must be 8 characters, ek uppercase, ek lowercase, ek number aur ek special character ho.");
+        return false;
+      }
+  
+      // confirm password match
+      if (password !== confirmPassword) {
+        alert("Error: Confirm Password match nahi kar raha.");
+        return false;
+      }
+  
+      alert("Signup successful!");
+      return true;
+    }
+  
+    // Attach function to form submit
+    document.querySelector("form").onsubmit = validateSignup;
+  </script>
+  
+</body>
+</html>

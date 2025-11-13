@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Madams Boutique</title>
+  <link rel="stylesheet" href="/Home/style.css" />
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+ 
+  
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="#hero" style="text-decoration: none;"> <div class="logo" >Madam Boutique</div></a>
+
+
+    <!-- Hamburger icon for mobile -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- Navigation links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#collections">Collections</a></li>
+      <li><a href="#brands">Brands</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#designers">Designers</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="/login/login.html"><button class="login-btn">Login</button></a></li>
+    </ul>
+  </nav>
+
+
+
+
+
+
+
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <!-- image element (replace hero.jpg with your image later) -->
+    <img src="/Home/hero.jpg" alt="Model wearing designer outfit" class="hero-image" />
+
+    <!-- semi-transparent overlay for readability -->
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+      <h1>Elegance Redefined</h1>
+      <p>Discover exclusive designer collections crafted with passion and luxury.</p>
+      <!-- button with href ready to be updated later -->
+      <a href="#collections" class="btn">Explore Collections</a>
+    </div>
+  </section>
+
+
+
+<!-- COLLECTIONS SECTION -->
+<section class="collections" id="collections">
+  <div class="container">
+    <h2>Our Latest Collections</h2>
+    <p class="collections-desc">
+      Discover our handpicked seasonal trends — from breezy summer vibes to elegant winter styles. 
+      Each collection reflects sophistication, comfort, and timeless fashion.
+    </p>
+
+    <div class="cards">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="/Home/summer.jpeg" alt="Summer Collection">
+        <h3>Summer Collection</h3>
+        <p>Light fabrics, soft hues, and fresh designs made for your sunny days.</p>
+        <a href="/Collection/Summer Collection/index.html" class="btn view-btn">View</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="/Home/winter.jpeg" alt="Winter Collection">
+        <h3>Winter Collection</h3>
+        <p>Warm textures and bold colors that bring style to cozy winters.</p>
+        <a href="/Collection/Winter Collection/index.html" class="btn view-btn">View</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="/Home/unstiched.jpg" alt="Unstitched Collection">
+        <h3>Unstitched Collection</h3>
+        <p>Design your own look with premium unstitched fabrics and prints.</p>
+        <a href="/Collection/Unstiched Collection/index.html" class="btn view-btn">View</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <img src="/Home/luxuray.jpeg" alt="Formal Collection">
+        <h3>Luxury Collection</h3>
+        <p>Graceful silhouettes crafted for elegant evenings and events.</p>
+        <a href="/Collection/Luxury Collection/index.html" class="btn view-btn">View</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- BRANDS SECTION -->
+<section class="brands" id="brands">
+  <div class="container">
+    <h2>Our Featured Brands</h2>
+    <p class="brands-desc">
+      We collaborate with the most renowned fashion brands to bring you 
+      the latest trends and timeless elegance — all under one roof.
+    </p>
+
+    <div class="brand-cards">
+      <!-- Brand 1 -->
+      <div class="brand-card">
+        <img src="/Home/khadi.jpg" alt="Brand One">
+        <h3>Khadi</h3>
+        <p>Known for luxury designs and high-end fabric that define true elegance.</p>
+        <a href="./Brands/Khadi/index.html" class="btn brand-btn">View Brand</a>
+      </div>
+
+      <!-- Brand 2 -->
+      <div class="brand-card">
+        <img src="/Home/sapphire.jpeg" alt="Brand Two">
+        <h3>Sapphire</h3>
+        <p>Combining tradition with modern fashion for an everlasting impression.</p>
+        <a href="./Brands/Sapphire/index.html" class="btn brand-btn">View Brand</a>
+      </div>
+
+      <!-- Brand 3 -->
+      <div class="brand-card">
+        <img src="/Home/saya.jpeg" alt="Brand Three">
+        <h3>Saya</h3>
+        <p>Crafted with creativity and passion — redefining contemporary luxury.</p>
+        <a href="./Brands/Saya/index.html" class="btn brand-btn">View Brand</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- GALLERY SECTION -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <h2>Hit Collection Gallery</h2>
+    <p class="gallery-desc">
+      Explore our most admired pieces — where creativity meets elegance. 
+      Each design tells a story of timeless fashion and artistry.
+    </p>
+
+    <div class="gallery-grid">
+      <!-- Image 1 -->
+      <div class="gallery-item">
+        <img src="/Home/shoot1.jpg" alt="Elegant Dress">
+        <div class="gallery-info">
+          <h4>Saya</h4>
+          <p>Designer: Aisha Khan</p>
+        </div>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="gallery-item">
+        <img src="/Home/shoot2.jpg" alt="Luxury Suit">
+        <div class="gallery-info">
+          <h4>Khaadi</h4>
+          <p>Designer: Zara Malik</p>
+        </div>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="gallery-item">
+        <img src="/Home/shoot3.jpg" alt="Classic Gown">
+        <div class="gallery-info">
+          <h4>Gul Ahmed</h4>
+          <p>Designer: Maria Noor</p>
+        </div>
+      </div>
+
+      <!-- Image 4 -->
+      <div class="gallery-item">
+        <img src="/Home/shoot4.jpg" alt="Modern Outfit">
+        <div class="gallery-info">
+          <h4>Sapphire</h4>
+          <p>Designer: Sana Abbas</p>
+        </div>
+      </div>
+
+      <!-- Image 5 -->
+      <div class="gallery-item">
+        <img src="/Home/shoot5.jpg" alt="Stylish Attire">
+        <div class="gallery-info">
+          <h4>Ideas</h4>
+          <p>Designer: Hira Sheikh</p>
+        </div>
+      </div>
+
+      <!-- Image 6 -->
+      <div class="gallery-item">
+        <img src="/Home/shoot6.jpg" alt="Formal Wear">
+        <div class="gallery-info">
+          <h4>Edenrobe</h4>
+          <p>Designer: Noor Fatima</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+  <!-- Designer Section -->
+  <section class="designers-section" id="designers">
+    <h2 class="section-title">Meet Our Designers</h2>
+    <p class="section-subtitle">Discover the creative minds behind our signature collections.</p>
+
+    <div class="designer-container">
+
+      <div class="designer-card">
+        <img src="/Home/ayesha.jpg" alt="Ayesha Noor Designer Image">
+        <h3>Ayesha Noor</h3>
+        <p class="specialization">Luxury Pret & Embroidered Lawn</p>
+        <p class="bio">Ayesha Noor brings elegance and tradition together through her intricate embroidery and soft pastel tones. Her designs represent the modern Pakistani woman — graceful, confident, and timeless.</p>
+        <a href="/Designers/aysha/Aysha.html" class="btn">Explore Designs</a>
+      </div>
+
+      <div class="designer-card">
+        <img src="/Home/zara.jpg" alt="Zara Ahmed Designer Image">
+        <h3>Zara Ahmed</h3>
+        <p class="specialization">Formal & Bridal Couture</p>
+        <p class="bio">Known for her exquisite bridal ensembles, Zara Ahmed blends contemporary cuts with traditional handwork. Each outfit tells a story of artistry and heritage crafted with perfection.</p>
+        <a href="/Designers/Zara/zara.html" class="btn">Explore Designs</a>
+      </div>
+
+      <div class="designer-card">
+        <img src="/Home/hina.jpg" alt="Hina Malik Designer Image">
+        <h3>Hina Malik</h3>
+        <p class="specialization">Unstitched & Festive Wear</p>
+        <p class="bio">Hina Malik’s festive unstitched collection is a vibrant mix of colors and fabrics, reflecting joy and culture. Her designs are made to bring comfort and class in every occasion.</p>
+        <a href="/Designers/Hina/hina malik.html" class="btn">Explore Designs</a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Branding Column -->
+      <div class="footer-column">
+        <h2 class="footer-logo">Madam’s Boutique</h2>
+        <p class="footer-tagline">Elegance in Every Thread</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#brands">Brands</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#designers">Designers</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </div>
+
+      
+      <!-- Contact Information -->
+      <div class="footer-column">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+        <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+        <p><i class="fas fa-envelope"></i> support@madamsboutique.com</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Madam’s Boutique. All Rights Reserved. | Designed by Muhib Ahmad</p>
+    </div>
+  </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+
+    // Toggle icon between bars and close (X)
+    const icon = menuToggle.querySelector("i");
+    icon.classList.toggle("fa-bars");
+    icon.classList.toggle("fa-xmark");
+  });
+});
+</script>
+</body>
+</html>

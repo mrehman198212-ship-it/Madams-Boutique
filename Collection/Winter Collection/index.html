@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Winter Collection</title>
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ======== NAVIGATION BAR START ========= -->
+    <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="../../Index.html" style="text-decoration: none;"> <div class="logo" >Madam Boutique</div></a>
+
+
+    <!-- Hamburger icon for mobile -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- Navigation links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../../Index.html">Home</a></li>
+      <li><a href="../../Index.html">Collections</a></li>
+      <li><a href="../../Index.html">Brands</a></li>
+      <li><a href="../../Index.html">Gallery</a></li>
+      <li><a href="../../Index.html">Designers</a></li>
+      <li><a href="../../about.html">About</a></li>
+      <li><a href="../../login/login.html"><button class="login-btn">Login</button></a></li>
+    </ul>
+  </nav>
+
+
+
+
+  
+    <!-- ======== SECTION START ========= -->
+  <section class="collection-section">
+    <h1>Winter Collection</h1>
+    <p>Embrace the chill with elegantly crafted winter suits that combine rich fabrics and intricate embroidery to keep you cozy without compromising on style.</p>
+    
+    
+    <div class="cards-container">
+      <!-- 9 Product Cards -->
+      <div class="card">
+        <img src="winter1.jfif" alt="Product 1">
+        <h3>Sunset Silhouettes</h3>
+        <p>Soft cotton shirt for everyday comfort.</p>
+        <p>Price: 3200</p>
+        <button class="buy-btn" data-name="Sunset Silhouettes" data-price="3200" data-img="winter1.jfif">Buy Now</button>
+      </div>
+
+      <div class="card">
+        <img src="winter2.jfif" alt="Product 2">
+        <h3>Breeze & Blazer</h3>
+        <p>Light and comfy shorts for beach fun.</p>
+        <p>Price: 2300</p>
+        <button class="buy-btn" data-name="Breeze & Blazer" data-price="2300" data-img="winter2.jfif">Buy Now</button>
+      </div>
+
+      <div class="card">
+        <img src="winter3.jfif" alt="Product 3">
+        <h3>Golden Hour Grace</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 4500</p>
+        <button class="buy-btn" data-name="Golden Hour Grace" data-price="4500" data-img="winter3.jfif">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="winter4.jfif" alt="Product 3">
+        <h3>Linen Luxe</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 5600</p>
+        <button class="buy-btn" data-name="Linen Luxe" data-price="5600" data-img="winter4.jfif">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="winter5.jfif" alt="Product 3">
+        <h3>Sunkissed Statements</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 1900</p>
+        <button class="buy-btn" data-name="Sunkissed Statements" data-price="1900" data-img="winter5.jfif">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="winter6.jfif" alt="Product 3">
+        <h3>Coastal Chic</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 2500</p>
+        <button class="buy-btn" data-name="Coastal Chic" data-price="2500" data-img="winter6.jfif">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="winter7.jfif" alt="Product 3">
+        <h3>Palm & Power</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 3500</p>
+        <button class="buy-btn" data-name="Palm & Power" data-price=3500" data-img="winter7.jfif">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="winter8.jfif" alt="Product 3">
+        <h3>Winter Tailored</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 3600</p>
+        <button class="buy-btn" data-name="Winter Tailored" data-price="3600" data-img="winter8.jfif">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="winter9.jfif" alt="Product 3">
+        <h3>Effortless Edge</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 3700</p>
+        <button class="buy-btn" data-name="Effortless Edge" data-price="3700" data-img="winter9.jfif">Buy Now</button>
+      </div>
+
+      <!-- Add more dummy cards similarly (total 9) -->
+    </div>
+  </section>
+
+  <!-- Popup Section -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span id="closePopup">&times;</span>
+      <img id="popupImg" src="" alt="Product">
+      <h3 id="popupName"></h3>
+      <p>Price: Rs <span id="popupPrice">0</span></p>
+      <div class="quantity-control">
+        <button id="decreaseQty">-</button>
+        <span id="quantity">1</span>
+        <button id="increaseQty">+</button>
+      </div>
+      <p>Total: Rs <span id="totalPrice">0</span></p>
+      <button id="purchaseBtn">Purchase</button>
+    </div>
+  </div>
+
+  <!-- Purchase Notification -->
+  <div id="orderMessage" class="order-message">Your order has been placed!</div>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Branding Column -->
+      <div class="footer-column">
+        <h2 class="footer-logo">Madam’s Boutique</h2>
+        <p class="footer-tagline">Elegance in Every Thread</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../../Index.html">Home</a></li>
+          <li><a href="../../Index.html">Collections</a></li>
+          <li><a href="../../Index.html">Brands</a></li>
+          <li><a href="../../Index.html">Gallery</a></li>
+          <li><a href="../../Index.html">Designers</a></li>
+          <li><a href="../../about.html">About</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Support -->
+      
+
+      <!-- Contact Information -->
+      <div class="footer-column">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+        <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+        <p><i class="fas fa-envelope"></i> support@madamsboutique.com</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Madam’s Boutique. All Rights Reserved. | Designed by Muhib Ahmad</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

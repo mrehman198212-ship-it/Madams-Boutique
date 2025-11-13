@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summer Collection</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- ======== NAVIGATION BAR START ========= -->
+    <nav class="navbar">
+      <a href="../../Index.html" style="text-decoration: none;"> <div class="logo" >Madam Boutique</div></a>
+
+
+    <!-- Hamburger icon for mobile -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- Navigation links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../../Index.html">Home</a></li>
+      <li><a href="../../Index.html">Collections</a></li>
+      <li><a href="../../Index.html">Brands</a></li>
+      <li><a href="../../Index.html">Gallery</a></li>
+      <li><a href="../../Index.html">Designers</a></li>
+      <li><a href="../../about.html">About</a></li>
+      <li><a href="../../login/login.html"><button class="login-btn">Login</button></a></li>
+    </ul>
+  </nav>
+    <!-- ======== SECTION START ========= -->
+  <section class="collection-section">
+    <h1>Khadi Suits</h1>
+    <p>Khaadi blends authentic handwoven fabrics with contemporary designs, offering vibrant and stylish apparel that celebrates Pakistani heritage.</p>
+    
+    
+    <div class="cards-container">
+      <!-- 9 Product Cards -->
+      <div class="card">
+        <img src="khadi1.jfif" alt="Product 1">
+        <h3>Amber Bloom</h3>
+        <p>Soft cotton shirt for everyday comfort.</p>
+        <p>Price: 1500</p>
+        <button class="buy-btn" data-name="Amber Bloom" data-price="1500" data-img="khadi1.jfif">Buy Now</button>
+      </div>
+
+      <div class="card">
+        <img src="khadi2.jfif" alt="Product 2">
+        <h3>Saffron Mist</h3>
+        <p>Light and comfy shorts for beach fun.</p>
+        <p>Price: 1200</p>
+        <button class="buy-btn" data-name="Saffron Mist" data-price="1200" data-img="khadi2.jfif">Buy Now</button>
+      </div>
+
+      <div class="card">
+        <img src="khadi3.jfif" alt="Product 3">
+        <h3>Midnight Zari</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 1600</p>
+        <button class="buy-btn" data-name="Midnight Zari" data-price="1600" data-img="khadi3.jfif">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="khadi4.jfif" alt="Product 3">
+        <h3>Rosewood Charm</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 1800</p>
+        <button class="buy-btn" data-name="Rosewood Charm" data-price="1800" data-img="khadi4.jfif">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="khadi5.jfif" alt="Product 3">
+        <h3>Ivory Meadow</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 1900</p>
+        <button class="buy-btn" data-name="Ivory Meadow" data-price="1900" data-img="khadi5.jfif">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="khadi6.jfif" alt="Product 3">
+        <h3>Crimson Dusk</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 1400</p>
+        <button class="buy-btn" data-name="Crimson Dusk" data-price="1400" data-img="khadi6.jfif">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="khai7.jfif" alt="Product 3">
+        <h3>Jasmine Veil</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 1500</p>
+        <button class="buy-btn" data-name="Jasmine Veil" data-price="1500" data-img="khadi7.jfif">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="khadi8.jfif" alt="Product 3">
+        <h3>Emerald Whispers</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 2100</p>
+        <button class="buy-btn" data-name="Emerald Whispers" data-price="2100" data-img="khadi8.jfif">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="khadi9.jfif" alt="Product 3">
+        <h3>Noor-e-Bahaar</h3>
+        <p>Bright floral prints perfect for sunny days.</p>
+        <p>Price: 3000</p>
+        <button class="buy-btn" data-name="Noor-e-Bahaar" data-price="3000" data-img="khadi9.jfif">Buy Now</button>
+      </div>
+
+      <!-- Add more dummy cards similarly (total 9) -->
+    </div>
+  </section>
+
+  <!-- Popup Section -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span id="closePopup">&times;</span>
+      <img id="popupImg" src="" alt="Product">
+      <h3 id="popupName"></h3>
+      <p>Price: Rs <span id="popupPrice">0</span></p>
+      <div class="quantity-control">
+        <button id="decreaseQty">-</button>
+        <span id="quantity">1</span>
+        <button id="increaseQty">+</button>
+      </div>
+      <p>Total: Rs <span id="totalPrice">0</span></p>
+      <button id="purchaseBtn">Purchase</button>
+    </div>
+  </div>
+
+  <!-- Purchase Notification -->
+  <div id="orderMessage" class="order-message">Your order has been placed!</div>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Branding Column -->
+      <div class="footer-column">
+        <h2 class="footer-logo">Madam’s Boutique</h2>
+        <p class="footer-tagline">Elegance in Every Thread</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../../Index.html">Home</a></li>
+          <li><a href="../../Index.html">Collections</a></li>
+          <li><a href="../../Index.html">Brands</a></li>
+          <li><a href="../../Index.html">Gallery</a></li>
+          <li><a href="../../Index.html">Designers</a></li>
+          <li><a href="../../about.html">About</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Support -->
+      
+
+      <!-- Contact Information -->
+      <div class="footer-column">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+        <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+        <p><i class="fas fa-envelope"></i> support@madamsboutique.com</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Madam’s Boutique. All Rights Reserved. | Designed by Muhib Ahmad</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

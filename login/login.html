@@ -1,0 +1,91 @@
+<!-- Is ma html or css or js use keya ha -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Madam Boutique</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <h1>Welcome Back</h1>
+      <p>Login to your account</p>
+
+      <form>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+
+        <div class="options">
+          <label><input type="checkbox"> Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+
+      <div class="divider"><span>or</span></div>
+
+      <div class="social-login">
+        <a href="https://www.google.com"><button class="google"><i class="fab fa-google"></i> Continue with Google</button></a>
+        <a href="https://www.apple.com"><button class="apple"><i class="fab fa-apple"></i> Continue with Apple</button></a>
+        <a href="https://www.facebook.com"><button class="facebook"><i class="fab fa-facebook-f"></i> Continue with Facebook</button></a>
+      </div>
+
+      <p class="signup-text">
+        Don’t have an account? <a href="signup.html">Sign up</a>
+      </p>
+    </div>
+  </div>
+  <script>
+    // Form validation function
+    function validateLogin() {
+      // get field values
+      let email = document.getElementById('email').value.trim();
+      let password = document.getElementById('password').value;
+  
+      // regex patterns (same style as your example)
+      let emailrule = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3}$/;
+      let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  
+      // check empty
+      if (email === "" || password === "") {
+        alert("Please fill in both Email and Password fields.");
+        return false;
+      }
+  
+      // email validation
+      if (!emailrule.test(email)) {
+        alert("Error: Email ka format sahi nahi hai. (e.g. example@xyz.com)");
+        return false;
+      }
+  
+      // password validation
+      if (!passwordPattern.test(password)) {
+        alert("Error: Password must be at least 8 characters, ek uppercase, ek lowercase, ek number aur ek special character hona chahiye.");
+        return false;
+      }
+  
+      // if everything correct
+      alert("Login successful!");
+      return true;
+    }
+  
+    // attach function to form submit
+    document.querySelector("form").onsubmit = validateLogin;
+  </script>
+  
+</body>
+</html>

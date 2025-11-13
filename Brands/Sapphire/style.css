@@ -1,0 +1,397 @@
+/* ==== General Styling ==== */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fffaf3;
+  color: #333;
+}
+
+
+:root {
+  --black: #0D0D0D;
+  --white: #FFFFFF;
+  --pink: #FFD700;
+  --pink-hover: #d8b906;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--light-base);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--black);
+  padding: 15px 10%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #222;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--pink);
+  letter-spacing: 1px;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--pink);
+}
+
+/* Login Button */
+.login-btn {
+  background-color: var(--pink);
+  border: none;
+  color: var(--white);
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: var(--pink-hover);
+}
+
+/* ===== MOBILE MENU TOGGLE ===== */
+.menu-toggle {
+  display: none;
+  color: var(--white);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: #111111;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li a {
+    font-size: 1.1rem;
+  }
+
+  .login-btn {
+    width: 120px;
+  }
+}
+
+
+
+
+
+
+/* ==== Section Heading ==== */
+.collection-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.collection-section h1 {
+  font-size: 2.5rem;
+  color: var(--pink);
+  margin-bottom: 10px;
+}
+
+.collection-section p {
+  max-width: 700px;
+  margin: 10px auto;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ==== Product Cards ==== */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.card .buy-btn {
+  background: var(--pink);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card .buy-btn:hover {
+  background: var(--pink-hover);
+}
+
+/* ==== Popup ==== */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.popup-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.popup-content h3 {
+  margin: 10px 0;
+  color: var(--black);
+}
+
+#closePopup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #555;
+}
+
+/* ==== Quantity Control ==== */
+.quantity-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.quantity-control button {
+  background: var(--pink);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.quantity-control span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ==== Purchase Button ==== */
+#purchaseBtn {
+  background: var(--pink);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+#purchaseBtn:hover {
+  background: var(--pink-hover);
+}
+
+/* ==== Order Message ==== */
+.order-message {
+  position: fixed;
+  top: 20px;
+  right: -300px;
+  background: #2ecc71;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.5s ease;
+  z-index: 1000;
+}
+
+.order-message.show {
+  right: 20px;
+}
+
+
+
+
+.footer {
+  background-color: var(--black);
+  color: #f8f3ef;
+  padding: 50px 0 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer-column h3 {
+  color: var(--pink);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  color: var(--pink);
+  margin-bottom: 10px;
+}
+
+.footer-tagline {
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.footer-socials a {
+  color: #f8f3ef;
+  font-size: 1.2rem;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: var(--pink-hover);
+  transform: scale(1.2);
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #f8f3ef;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: var(--pink-hover);
+}
+
+.footer-column p i {
+  color: var(--pink);
+  margin-right: 8px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #444;
+  font-size: 0.9rem;
+  color: #ccc;
+}
